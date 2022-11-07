@@ -5,6 +5,7 @@ emailOpenOrc2text = SSHOperator(
     ssh_hook = sshHook,
     task_id='emailOpenOrc2text',
     command="""r'sh -x /home/ebiklondikep/spock/runspockKlondike_minio_subbu1.sh 20190522 20190621 emailOpenOrc2text'+ '{{ Variable.get('Klondikejob_sampleworkflow_exec') }}' +'8G KLONDIKE 0'""",
+    # command=r'sh -x /home/ebiklondikep/spock/runspockKlondike_minio_subbu1.sh 20190522 20190621 emailOpenOrc2text'+ '{{ Variable.get('Klondikejob_sampleworkflow_exec') }}' +'8G KLONDIKE 0',
     params={'s_mth':s_mth,'e_mth':e_mth},
     trigger_rule='all_success',
     #append_env=True,
